@@ -1,0 +1,23 @@
+// sublime text 3 setup for c++ windows 10
+1...download sublime text 3
+2.. Download mingw there will be some option (in it tick all/ most importantly g++ extension in mingw  and then apply chances )
+3.. after  mingw download----go  copy---C:\MinGW\bin 
+4.. search and open in start "view advanced system setting" --open environment variable--system variable--path---edit--new--paste "C:\MinGW\bin"
+5.. Check in cmp by typing "g++ --version"
+6.. open sublime text --- tools---build system---new build system
+delete all ans paste below
+.................................................
+{ 
+"shell_cmd": "g++ \"${file}\" -o \"${file_path}\\\\${file_base_name}\"", "file_regex": "^(..[^:]):([0-9]+):?([0-9]+)?:? (.)$",
+"working_dir": "${file_path}", 
+"selector": "source.c, source.c++",
+ 
+"variants": [
+ { "name": "Run", "shell_cmd": "g++ -O2 -std=c++11 \"${file}\" -o \"${file_path}\\\\${file_base_name}\" && \"${file_path}\\\\${file_base_name}\" < input.txt" }
+ ]
+ }
+..............................................................................................
+7.. save it with any "name" and restart sublime text
+8.. tools---build--set with "name"
+9.. for taking input make file input.txt in the folder where you would save your file
+10.. write code save and put input in input.txt after open in sublime save it and press crtl+shift+B first name then name run 
