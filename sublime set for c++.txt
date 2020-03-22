@@ -21,3 +21,9 @@ delete all ans paste below
 8.. tools---build--set with "name"
 9.. for taking input make file input.txt in the folder where you would save your file
 10.. write code save and put input in input.txt after open in sublime save it and press crtl+shift+B first name then name run 
+11... for better make input.txt and output.txt,,,where you would code ,,, put test cases input.txt you will get output in output.txt after adding
+#ifndef ONLINE_JUDGE
+  freopen("input.txt", "r", stdin);
+  freopen("output.txt", "w", stdout);
+#endif
+
